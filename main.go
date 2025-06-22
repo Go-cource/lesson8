@@ -2,8 +2,15 @@ package main
 
 import "fmt"
 
+func terraform(planets [9]string) {
+	//ЗДЕСЬ СВОЙ PLANETS [8]string
+	for i := range planets {
+		planets[i] = "New " + planets[i]
+	}
+}
+
 func main() {
-	planets := [8]string{
+	planets := [...]string{
 		"Меркурий",
 		"Венера",
 		"Земля",
@@ -13,11 +20,7 @@ func main() {
 		"Уран",
 		"Нептун",
 	}
+
+	terraform(planets) //[new Меркурий, new etc]
 	fmt.Println(planets)
-	// for i := 0; i < len(planets); i++ {
-	// 	fmt.Println(planets[i])
-	// }
-	for index, value := range planets {
-		fmt.Printf("Элемент с индексом: %d - %s\n", index, value)
-	}
 }
