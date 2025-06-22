@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
-
 func main() {
-	question := "¿Cómo estás?"
-	fmt.Println(question[:6])
+	// question := "¿Cómo estás?"
+	// fmt.Println(question[:6])
+
+	// symb := "ががc"
+	// fmt.Println(symb[:7])
+	
+
 
 }
