@@ -2,13 +2,6 @@ package main
 
 import "fmt"
 
-func terraform(planets [9]string) {
-	//ЗДЕСЬ СВОЙ PLANETS [8]string
-	for i := range planets {
-		planets[i] = "New " + planets[i]
-	}
-}
-
 func main() {
 	planets := [...]string{
 		"Меркурий",
@@ -20,7 +13,7 @@ func main() {
 		"Уран",
 		"Нептун",
 	}
+	terr := planets[4:]
+	fmt.Println(terr)
 
-	terraform(planets) //[new Меркурий, new etc]
-	fmt.Println(planets)
 }
