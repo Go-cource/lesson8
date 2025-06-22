@@ -1,12 +1,19 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var planets [8]string
-	i := 8
-	fmt.Println(planets[i])
+	planets := [...]string{ // Компилятор Go подсчитывает элементы
+		"Меркурий",
+		"Венера",
+		"Земля",
+		"Марс",
+		"Юпитер",
+		"Сатурн",
+		"Уран",
+		"Нептун",
+		"центавра",
+	}
+	fmt.Println(planets)
 
 }
