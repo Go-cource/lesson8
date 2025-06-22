@@ -1,16 +1,25 @@
 package main
 
+import (
+	"fmt"
+	"strings"
+)
+
+func hyperspace(worlds []string) {
+	//worlds []string - ссылка на тот же самый массив, что и []string{" Венера ", "Земля", " Марс"}
+	for i := range worlds {
+		worlds[i] = strings.TrimSpace(worlds[i])
+	}
+}
+
 func main() {
-	// question := "¿Cómo estás?"
-	// fmt.Println(question[:6])
+	planets := []string{" Венера ", "Земля", " Марс"} // где-то в память есть оригианльный массив, на который этот слайс ссылается
+	hyperspace(planets)
 
-	// symb := "ががc"
-	// fmt.Println(symb[:7])
+	planets2 := []string{" Нептун ", "  Плутон "}
+	hyperspace(planets2)
 
-	// ewq := [3]string{"qwe", "ewq", "asd"}
-	// qwe := []string{"Церера", "Плутон", "Хаумеа", "Макемаке", "Эрида"}
-
-	// fmt.Printf("%T\n", ewq)
-	// fmt.Printf("%T", qwe)
-
+	fmt.Println(strings.Join(planets, ""))
+	fmt.Println(strings.Join(planets2, ""))
+	fmt.Printf("%p", &planets)
 }
