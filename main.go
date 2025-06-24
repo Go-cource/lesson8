@@ -1,24 +1,17 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
-func hyperspace(worlds []string) {
-	for i := range worlds {
-		worlds[i] = strings.TrimSpace(worlds[i])
-	}
-}
+import "fmt"
 
 func main() {
-	// planets := []string{" Венера ", "Земля", " Марс"}
-	// hyperspace(planets)
+	a := 10
+	var p *int //Указатель на int
+	p = &a
+	fmt.Println(a, p)
+	*p = 15
+	fmt.Println(a)
+	//Нельзя делать указатель на const
+	// const c = 5
+	// p1 := &"asdasd"
+	// p2 := &c
 
-	// planets2 := []string{" Нептун ", "  Плутон "}
-	// hyperspace(planets2)
-
-	// fmt.Println(strings.Join(planets, ""))
-	// fmt.Println(strings.Join(planets2, ""))
-	// fmt.Printf("%T", &planets)
 }
